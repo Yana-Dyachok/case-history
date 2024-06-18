@@ -39,7 +39,7 @@ function Header() {
         <LinkTemplateIcon to="/analysis" className={styles.iconAnalysis}>
           Аналізи
         </LinkTemplateIcon>
-        <LinkTemplateIcon to="/analysis" className={styles.iconDiagnostic}>
+        <LinkTemplateIcon to="/diagnosis" className={styles.iconDiagnostic}>
           Діагностика
         </LinkTemplateIcon>
         <LinkTemplateIcon to="/consultations" className={styles.iconDoctors}>

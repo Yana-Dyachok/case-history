@@ -3,6 +3,10 @@ import MainPage from '../pages/main-page/main-page';
 import NotFoundPage from '../pages/not-found-page/not-found-page';
 import AnamnesisMorbiPage from '../pages/anamnesis-morbi/anamnesis-morbi';
 import AnamnesisVitePage from '../pages/anamnesis-vite/anamnesis-vite';
+import AnalysisPage from '../pages/analysis/analysis-page';
+import DiagnosisPage from '../pages/diagnosis/diagnosis-page';
+import DoctorsPage from '../pages/doctors/doctors-page';
+import TreatmentPage from '../pages/treatment/treatment-page';
 
 function Router() {
   return (
@@ -12,6 +16,10 @@ function Router() {
       <Route path="/*" element={<NotFoundPage />} />
       <Route path="/anamnesis-morbi" element={<AnamnesisMorbiPage />} />
       <Route path="/anamnesis-vite" element={<AnamnesisVitePage />} />
+      <Route path="/analysis" element={<AnalysisPage />} />
+      <Route path="/diagnosis" element={<DiagnosisPage />} />
+      <Route path="/treatment" element={<TreatmentPage/>} />
+      <Route path="/consultations" element={<DoctorsPage/>} />
     </Routes>
   );
 }
