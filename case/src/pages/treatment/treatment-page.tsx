@@ -1,14 +1,12 @@
-import Tags from '../../components/ui/tags/tags';
 import Header from '../../components/header/header';
+import TreatmentContent from '../../components/treatment-content/treatment-content';
 import Footer from '../../components/footer/footer';
 
 function TreatmentPage() {
   return (
     <>
       <Header />
-      <div>
-        <Tags.H1> Doctors</Tags.H1>
-      </div>
+     <TreatmentContent/>
       <Footer />
     </>
   );

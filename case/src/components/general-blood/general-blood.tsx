@@ -1,6 +1,6 @@
 import Tags from '../../components/ui/tags/tags';
 
-function DiagnosisPage() {
+function GeneralBlood() {
   return (
       <div>
         <Tags.H1>Загальний Аналіз Крові</Tags.H1>
@@ -8,4 +8,4 @@ function DiagnosisPage() {
   );
 }
 
-export default DiagnosisPage;
+export default GeneralBlood;

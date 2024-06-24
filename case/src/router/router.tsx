@@ -7,6 +7,7 @@ import AnalysisPage from '../pages/analysis/analysis-page';
 import DiagnosisPage from '../pages/diagnosis/diagnosis-page';
 import DoctorsPage from '../pages/doctors/doctors-page';
 import TreatmentPage from '../pages/treatment/treatment-page';
+import GeneralBlood from '../components/general-blood/general-blood';
 
 function Router() {
   return (
@@ -20,6 +21,7 @@ function Router() {
       <Route path="/diagnosis" element={<DiagnosisPage />} />
       <Route path="/treatment" element={<TreatmentPage/>} />
       <Route path="/consultations" element={<DoctorsPage/>} />
+      <Route path="/analysis/general" element={< GeneralBlood />} />
     </Routes>
   );
 }

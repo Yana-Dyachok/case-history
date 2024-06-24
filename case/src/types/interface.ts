@@ -19,3 +19,17 @@ export interface ILeucogram {
   Lymph: number;
   Mon: number;
 }
+
+export interface IDocumentsImg {
+  imageUrlArray: string[];
+}
+
+export interface IDocumentProps {
+  documentsImg: IDocumentsImg;
+}
+
+export interface IPopUpProps {
+  documentsImg: IDocumentsImg;
+  initialImageUrl: string;
+  onClose: () => void;
+}

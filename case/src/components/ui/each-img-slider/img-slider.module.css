@@ -1,18 +1,18 @@
 .sliderBlock {
   position: relative;
+  width: 30rem;
 }
 
-.productPageImgBlock {
-    min-width: 25rem;
-    min-height: 30rem;
-    width: 25rem;
-    height: 30rem;
-    border: 0.2rem solid var(--c-green-400);
+.documentPageImgBlock {
+    min-width: 30rem;
+    min-height: 40rem;
+    width: 30rem;
+    height: 40rem;
     border-radius: 1rem;
     cursor: pointer;
   }
   
-  .productPageImage {
+  .documentPageImage {
     width: 100%;
     height: 100%;
     object-fit: fill;
@@ -23,22 +23,22 @@
   .sliderBtns {
     position: absolute;
     top: 50%;
-    width: 25rem;
+    width: 30rem;
     z-index: 999;
   }
 
-  @media (max-width: 470px) {
+  @media (max-width: 600px) {
     .sliderBlock {
-     width: 20rem;
+     width: 25rem;
     }
 
-    .productPageImgBlock {
-      min-width: 19.5rem;
-      width: 19.5rem;
+    .documentPageImgBlock {
+      min-width: 25rem;
+      width: 25rem;
     }
 
     .sliderBtns {
-      width: 20rem;
+      width: 25rem;
     }
   }
   
