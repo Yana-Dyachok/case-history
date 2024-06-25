@@ -8,6 +8,7 @@ import DiagnosisPage from '../pages/diagnosis/diagnosis-page';
 import DoctorsPage from '../pages/doctors/doctors-page';
 import TreatmentPage from '../pages/treatment/treatment-page';
 import GeneralBlood from '../components/general-blood/general-blood';
+import ImgDocumentPage from '../pages/img-document-page/img-document-page';
 
 function Router() {
   return (
@@ -21,7 +22,9 @@ function Router() {
       <Route path="/diagnosis" element={<DiagnosisPage />} />
       <Route path="/treatment" element={<TreatmentPage/>} />
       <Route path="/consultations" element={<DoctorsPage/>} />
-      <Route path="/analysis/general" element={< GeneralBlood />} />
+      <Route path="/analysis/*" element={<GeneralBlood />} />
+      <Route path="/consultations/*" element={<ImgDocumentPage/>} />
+      <Route path="/diagnosis/*" element={<ImgDocumentPage/>} />
     </Routes>
   );
 }

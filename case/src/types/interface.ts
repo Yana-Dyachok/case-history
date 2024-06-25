@@ -21,6 +21,7 @@ export interface ILeucogram {
 }
 
 export interface IDocumentsImg {
+  id: string;
   imageUrlArray: string[];
 }
 

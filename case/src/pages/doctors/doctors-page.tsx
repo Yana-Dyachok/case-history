@@ -1,14 +1,14 @@
-import Tags from '../../components/ui/tags/tags';
 import Header from '../../components/header/header';
+import AllLinks from '../../components/ui/all-links/all-links';
+import { doctorsType } from './doctors';
 import Footer from '../../components/footer/footer';
 
 function DoctorsPage() {
+  const kindOf = 'consultations';
   return (
     <>
       <Header />
-      <div>
-        <Tags.H1> Doctors</Tags.H1>
-      </div>
+      <AllLinks kind={kindOf} documentType={doctorsType} />
       <Footer />
     </>
   );

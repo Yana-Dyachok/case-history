@@ -22,9 +22,9 @@ function PopUpImg({ documentsImg, initialImageUrl, onClose }: IPopUpProps) {
             }}
             spaceBetween={35}
             slidesPerView={1}
-            initialSlide={documentsImg.imageUrlArray.indexOf(initialImageUrl)}
+            initialSlide={documentsImg?.imageUrlArray.indexOf(initialImageUrl)}
           >
-            {documentsImg.imageUrlArray.map((imgUrl) => (
+            {documentsImg?.imageUrlArray.map((imgUrl) => (
               <SwiperSlide key={imgUrl}>
                 <div className={styles.popupImageBlock}>
                   <img

@@ -1,12 +1,12 @@
 import Header from '../../components/header/header';
-import TreatmentContent from '../../components/treatment-content/treatment-content';
+import AllLinks from '../../components/ui/all-links/all-links';
 import Footer from '../../components/footer/footer';
 
 function TreatmentPage() {
   return (
     <>
       <Header />
-     <TreatmentContent/>
+     {/* <AllLinks/> */}
       <Footer />
     </>
   );

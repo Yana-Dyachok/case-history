@@ -1,21 +1,15 @@
 import Header from '../../components/header/header';
+import AllLinks from '../../components/ui/all-links/all-links';
 import Footer from '../../components/footer/footer';
-import { anatysisType, AnalysisTypeKeys } from './analysis';
-import LinkTemplate from '../../components/ui/link/link';
-
-import styles from './analysis.module.css';
+import { anatysisType } from './analysis';
 
 function AnalysisPage() {
+    const kindOf = 'analisis';
+
     return (
         <>
             <Header />
-            <div className={styles.container}>
-                {Object.keys(anatysisType).map((key) => (
-                    <LinkTemplate key={key} to={`/analysis/${key}`}>
-                        {anatysisType[key as AnalysisTypeKeys]}
-                    </LinkTemplate>
-                ))}
-            </div>
+            <AllLinks kind={kindOf} documentType={anatysisType} />
             <Footer />
         </>
     );

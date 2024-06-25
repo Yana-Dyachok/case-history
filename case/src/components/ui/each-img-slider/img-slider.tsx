@@ -8,7 +8,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import styles from './img-slider.module.css';
 
-function ImgSlider({ documentsImg }: IDocumentProps) {
+function ImgSlider({ documentsImg}: IDocumentProps) {
   const [isPopUp, setIsPopUp] = useState<boolean>(false);
   const [currentImgUrl, setCurrentImgUrl] = useState<string>('');
 
@@ -31,7 +31,7 @@ function ImgSlider({ documentsImg }: IDocumentProps) {
   };
 
   return (
-    <>
+    <div className={styles.container}>
       <div className={styles.sliderBlock}>
         <Swiper
           modules={[Navigation]}
@@ -42,7 +42,7 @@ function ImgSlider({ documentsImg }: IDocumentProps) {
           spaceBetween={30}
           slidesPerView={1}
         >
-          {documentsImg.imageUrlArray.map((imgUrl) => (
+          {documentsImg?.imageUrlArray.map((imgUrl) => (
             <SwiperSlide key={imgUrl}>
               <div
                 className={styles.documentPageImgBlock}
@@ -72,7 +72,7 @@ function ImgSlider({ documentsImg }: IDocumentProps) {
           onClose={handleClosePopUp}
         />
       )}
-    </>
+    </div>
   );
 }
 

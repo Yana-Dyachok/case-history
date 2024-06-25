@@ -1,0 +1,6 @@
+.container {
+    max-width: 40rem;
+    min-height: 80vh;
+    display: grid;
+    place-content: center;
+}
