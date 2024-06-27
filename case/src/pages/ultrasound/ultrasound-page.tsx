@@ -1,6 +1,6 @@
 import Header from '../../components/header/header';
 import AllLinks from '../../components/ui/all-links/all-links';
-import {ultrasoundType} from './ultrasound';
+import { ultrasoundType } from './ultrasound';
 import Footer from '../../components/footer/footer';
 
 function UltrasoundPage() {
@@ -14,4 +14,4 @@ function UltrasoundPage() {
   );
 }
 
-export default  UltrasoundPage;
+export default UltrasoundPage;

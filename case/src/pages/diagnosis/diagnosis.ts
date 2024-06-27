@@ -1,4 +1,10 @@
-export type DiagnosisTypeKeys = 'ultrasound' | 'fgds' | 'sct' | 'petct' | 'ecg';
+export type DiagnosisTypeKeys =
+  | 'ultrasound'
+  | 'fgds'
+  | 'sct'
+  | 'petct'
+  | 'ecg'
+  | 'pathistology';
 
 export const diagnosisType: Record<DiagnosisTypeKeys, string> = {
   ultrasound: 'УЗД',
@@ -6,4 +12,5 @@ export const diagnosisType: Record<DiagnosisTypeKeys, string> = {
   sct: 'СКТ',
   petct: 'ПЕТ КТ',
   ecg: 'ЕКГ',
+  pathistology: 'Патогістологічне дослідження ',
 };

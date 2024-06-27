@@ -10,6 +10,7 @@ import TreatmentPage from '../pages/treatment/treatment-page';
 import GeneralBlood from '../components/general-blood/general-blood';
 import ImgDocumentPage from '../pages/img-document-page/img-document-page';
 import UltrasoundPage from '../pages/ultrasound/ultrasound-page';
+
 function Router() {
   return (
     <Routes>
@@ -25,7 +26,7 @@ function Router() {
       <Route path="/analysis/*" element={<GeneralBlood />} />
       <Route path="/consultations/*" element={<ImgDocumentPage />} />
       <Route path="/diagnosis/*" element={<ImgDocumentPage />} />
-      <Route path="/diagnosis/ultrasound/*" element={<UltrasoundPage/>} />
+      <Route path="/diagnosis/ultrasound/*" element={<UltrasoundPage />} />
     </Routes>
   );
 }

@@ -21,17 +21,27 @@ export interface ILeucogram {
   Mon: number;
 }
 
-export interface IDocumentsImg {
+export interface IDocuments {
   id: string;
   imageUrlArray: string[];
+  pdfArray: string[];
 }
 
 export interface IDocumentProps {
-  documentsImg: IDocumentsImg;
+  documents: IDocuments;
 }
 
 export interface IPopUpProps {
-  documentsImg: IDocumentsImg;
+  documentsImg: IDocuments;
   initialImageUrl: string;
   onClose: () => void;
 }
+
+// export interface IDocumentsPdf {
+//   id: string;
+//   pdfArray: string[];
+// }
+
+// export interface IDocumentPdfProps {
+//   documentsPdf: IDocumentsPdf;
+// }
