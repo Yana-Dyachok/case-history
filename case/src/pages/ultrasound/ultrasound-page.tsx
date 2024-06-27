@@ -1,18 +1,17 @@
 import Header from '../../components/header/header';
 import AllLinks from '../../components/ui/all-links/all-links';
+import {ultrasoundType} from './ultrasound';
 import Footer from '../../components/footer/footer';
-import { anatysisType } from './analysis';
 
-function AnalysisPage() {
-  const kindOf = 'analisis';
-
+function UltrasoundPage() {
+  const kindOf = 'diagnosis/ulrasound';
   return (
     <>
       <Header />
-      <AllLinks kind={kindOf} documentType={anatysisType} />
+      <AllLinks kind={kindOf} documentType={ultrasoundType} />
       <Footer />
     </>
   );
 }
 
-export default AnalysisPage;
+export default  UltrasoundPage;

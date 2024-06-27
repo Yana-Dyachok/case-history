@@ -8,7 +8,7 @@ export type ButtonType = {
 
 export type Neutrophils = {
   Segments: number;
-  BandCells: number|0;
-  Young?: number|0;
-  Reticulocytes?: number|0;
-}
+  BandCells: number | 0;
+  Young?: number | 0;
+  Reticulocytes?: number | 0;
+};

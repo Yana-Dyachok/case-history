@@ -9,7 +9,7 @@ import DoctorsPage from '../pages/doctors/doctors-page';
 import TreatmentPage from '../pages/treatment/treatment-page';
 import GeneralBlood from '../components/general-blood/general-blood';
 import ImgDocumentPage from '../pages/img-document-page/img-document-page';
-
+import UltrasoundPage from '../pages/ultrasound/ultrasound-page';
 function Router() {
   return (
     <Routes>
@@ -20,11 +20,12 @@ function Router() {
       <Route path="/anamnesis-vite" element={<AnamnesisVitePage />} />
       <Route path="/analysis" element={<AnalysisPage />} />
       <Route path="/diagnosis" element={<DiagnosisPage />} />
-      <Route path="/treatment" element={<TreatmentPage/>} />
-      <Route path="/consultations" element={<DoctorsPage/>} />
+      <Route path="/treatment" element={<TreatmentPage />} />
+      <Route path="/consultations" element={<DoctorsPage />} />
       <Route path="/analysis/*" element={<GeneralBlood />} />
-      <Route path="/consultations/*" element={<ImgDocumentPage/>} />
-      <Route path="/diagnosis/*" element={<ImgDocumentPage/>} />
+      <Route path="/consultations/*" element={<ImgDocumentPage />} />
+      <Route path="/diagnosis/*" element={<ImgDocumentPage />} />
+      <Route path="/diagnosis/ultrasound/*" element={<UltrasoundPage/>} />
     </Routes>
   );
 }

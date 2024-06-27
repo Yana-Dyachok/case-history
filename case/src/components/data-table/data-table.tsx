@@ -1,9 +1,15 @@
-interface ITableProps<T extends object> {
+type DataRow = {
+  id: string;
+  name: string;
+  [key: string]: string;
+};
+
+interface ITableProps<T extends DataRow> {
   data: T[];
   title: string;
 }
 
-const DataTable = <T extends object>({ data, title }: ITableProps<T>) => {
+function DataTable<T extends DataRow>({ data, title }: ITableProps<T>) {
   if (!data || data.length === 0) {
     return <div>Немає даних для відображення</div>;
   }
@@ -22,10 +28,10 @@ const DataTable = <T extends object>({ data, title }: ITableProps<T>) => {
           </tr>
         </thead>
         <tbody>
-          {data.map((row, index) => (
-            <tr key={index}>
+          {data.map((row) => (
+            <tr key={row.id}>
               {headers.map((header) => (
-                <td key={header}>{(row as any)[header]}</td>
+                <td key={header}>{row[header]}</td>
               ))}
             </tr>
           ))}
@@ -33,6 +39,6 @@ const DataTable = <T extends object>({ data, title }: ITableProps<T>) => {
       </table>
     </div>
   );
-};
+}
 
 export default DataTable;

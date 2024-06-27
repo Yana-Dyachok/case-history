@@ -1,7 +1,7 @@
 import { Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SliderButton from '../slider-button/slider-button';
-import {IPopUpProps } from '../../../types/interface';
+import { IPopUpProps } from '../../../types/interface';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import styles from './popup-img.module.css';
@@ -11,7 +11,12 @@ function PopUpImg({ documentsImg, initialImageUrl, onClose }: IPopUpProps) {
     <div className={styles.popup}>
       <div className={styles.popupBody}>
         <div className={styles.popupContentImg}>
-        <button type="button" className={styles.closePopupBtn} onClick={onClose}/>
+          {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
+          <button
+            type="button"
+            className={styles.closePopupBtn}
+            onClick={onClose}
+          />
           <Swiper
             style={{ marginLeft: 'unset', marginRight: 'unset' }}
             className={styles.swiper}

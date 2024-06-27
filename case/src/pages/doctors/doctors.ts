@@ -1,4 +1,9 @@
-export type DoctorsTypeKeys = 'familydoctor' | 'otolaryngologist' | 'urologist' | 'hematologist'|'mamologist';
+export type DoctorsTypeKeys =
+  | 'familydoctor'
+  | 'otolaryngologist'
+  | 'urologist'
+  | 'hematologist'
+  | 'mamologist';
 
 export const doctorsType: Record<DoctorsTypeKeys, string> = {
   familydoctor: 'Огляд сімейного лікаря',
