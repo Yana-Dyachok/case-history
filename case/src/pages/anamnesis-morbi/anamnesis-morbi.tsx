@@ -9,7 +9,7 @@ function AnamnesisMorbiPage() {
       <Header />
       <div className={styles.container}>
         <Tags.H1> Anamnesis Morbi</Tags.H1>
-        <p>Хворою вважаю себе із 03.24.</p>
+        <span>Хворою вважаю себе із 03.24.</span>
         <Tags.H2>Скарги:</Tags.H2>
         <ul>
           <li>
@@ -57,7 +57,7 @@ function AnamnesisMorbiPage() {
             коагулограма, РВ, Ro ОГК, ЕКГ, тест на ВІЛ, Covid-19.
           </li>
         </ul>
-        <Tags.H2>Ліки:</Tags.H2>
+        <Tags.H2>Лікування:</Tags.H2>
         <p>З 03.24 по 05.24 приймала:</p>
         <ul>
           <li>
