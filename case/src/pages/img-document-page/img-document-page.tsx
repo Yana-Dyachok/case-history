@@ -3,7 +3,7 @@ import Header from '../../components/header/header';
 import ImgSlider from '../../components/ui/each-img-slider/img-slider';
 import { IDocuments } from '../../types/interface';
 import doctorsArray from '../../mockAPI/doctors-db';
-import { diagnosisArray, ultrasoundArray } from '../../mockAPI/diagnosis-db';
+import { diagnosisArray, ultrasoundArray, infectionsArray } from '../../mockAPI/diagnosis-db';
 import PdfSlider from '../../components/ui/pdf-slider/pdf-slider';
 import Footer from '../../components/footer/footer';
 import Loading from '../../components/ui/loading/loading';
@@ -11,12 +11,14 @@ import Loading from '../../components/ui/loading/loading';
 function ImgDocumentPage() {
   const location = useLocation();
   const segments = location.pathname.split('/');
-  const doctorId = segments[segments.length - 1];
+  const id = segments[segments.length - 1];
+  console.log(segments)
   const documents: IDocuments | undefined = [
     ...diagnosisArray,
     ...doctorsArray,
     ...ultrasoundArray,
-  ].find((el) => el.id === doctorId);
+    ...infectionsArray
+  ].find((el) => el.id === id);
   if (!documents) {
     return (
       <>

@@ -2,11 +2,11 @@ export type AnalysisTypeKeys =
   | 'general'
   | 'biochemistry'
   | 'urina'
-  | 'bloodInfect';
+  | 'infections';
 
-export const anatysisType: Record<AnalysisTypeKeys, string> = {
+export const analysisType: Record<AnalysisTypeKeys, string> = {
   general: 'Загальний Аналіз Крові',
   biochemistry: 'Біохімічний Аналіз Крові',
   urina: 'Загальний Аналіз Сечі',
-  bloodInfect: 'На Інфекційні Захворювання',
+  infections: 'На Інфекційні Захворювання',
 };

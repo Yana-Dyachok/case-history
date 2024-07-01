@@ -41,8 +41,8 @@
 }
 
 .iconMain  {
-  min-width: 4rem;
-  height: 4rem;
+  min-width: 3rem;
+  height: 3rem;
   mask-repeat: no-repeat;
   mask-size: contain;
   mask-position: center;
@@ -139,7 +139,7 @@
     font-size: 2rem;
   }
 
-  .iconLogOut {
-    display: none;
+  .iconMain {
+    display: block;
   }
 }
