@@ -14,7 +14,7 @@ import InfectionsPage from '../pages/infections-page/infections-page';
 function Router() {
   return (
     <Routes>
-      <Route path="/case-history/" element={<Navigate to="/main" replace />} />
+      <Route path="/case-history/" element={<Navigate to="/case-history/main" replace />} />
       <Route path="/case-history/main" element={<MainPage />} />
       <Route path="/anamnesis-morbi" element={<AnamnesisMorbiPage />} />
       <Route path="/anamnesis-vite" element={<AnamnesisVitePage />} />

@@ -15,7 +15,7 @@ function NotFoundPage() {
           <span className={styles.digitThird}>4</span>
         </span>
       </section>
-      <Button btnType="button" to="/catalog">
+      <Button btnType="button" to="/case-history/main">
         To main page
       </Button>
     </div>
