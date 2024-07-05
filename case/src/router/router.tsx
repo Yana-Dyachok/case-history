@@ -14,8 +14,8 @@ import InfectionsPage from '../pages/infections-page/infections-page';
 function Router() {
   return (
     <Routes>
-      <Route path="/" element={<Navigate to="/main" replace />} />
-      <Route path="/main" element={<MainPage />} />
+      <Route path="/case-history/" element={<Navigate to="/main" replace />} />
+      <Route path="/case-history/main" element={<MainPage />} />
       <Route path="/anamnesis-morbi" element={<AnamnesisMorbiPage />} />
       <Route path="/anamnesis-vite" element={<AnamnesisVitePage />} />
       <Route path="/analysis" element={<AnalysisPage />} />
@@ -26,7 +26,8 @@ function Router() {
       <Route path="/treatment" element={<TreatmentPage />} />
       <Route path="/consultations" element={<DoctorsPage />} />
       <Route path="/consultations/*" element={<ImgDocumentPage />} />
-      <Route path="/analysis/infections/*" element={<InfectionsPage />} />
+      <Route path="/analysis/infections/" element={<InfectionsPage />} />
+      <Route path="/analysis/infections/*" element={<ImgDocumentPage />} />
       <Route path="/*" element={<NotFoundPage />} />
     </Routes>
   );
