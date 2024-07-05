@@ -1,3 +1,0 @@
-cd case
-npm run lint:fix
-npm run lint
