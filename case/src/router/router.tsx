@@ -1,4 +1,9 @@
-import { Routes, Route, Navigate } from 'react-router-dom';
+import {
+  Route,
+  createBrowserRouter,
+  createRoutesFromElements,
+} from 'react-router-dom';
+import Layout from '../components/layout/layout';
 import MainPage from '../pages/main-page/main-page';
 import NotFoundPage from '../pages/not-found-page/not-found-page';
 import AnamnesisMorbiPage from '../pages/anamnesis-morbi/anamnesis-morbi';
@@ -11,11 +16,10 @@ import ImgDocumentPage from '../pages/img-document-page/img-document-page';
 import UltrasoundPage from '../pages/ultrasound/ultrasound-page';
 import InfectionsPage from '../pages/infections-page/infections-page';
 
-function Router() {
-  return (
-    <Routes>
-      <Route path="/case-history" element={<Navigate to="/main" replace />} />
-      <Route path="/main" element={<MainPage />} />
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route element={<Layout />}>
+      <Route path="/" element={<MainPage />} />
       <Route path="/anamnesis-morbi" element={<AnamnesisMorbiPage />} />
       <Route path="/anamnesis-vite" element={<AnamnesisVitePage />} />
       <Route path="/analysis" element={<AnalysisPage />} />
@@ -29,8 +33,8 @@ function Router() {
       <Route path="/analysis/infections/" element={<InfectionsPage />} />
       <Route path="/analysis/infections/*" element={<ImgDocumentPage />} />
       <Route path="/*" element={<NotFoundPage />} />
-    </Routes>
-  );
-}
+    </Route>,
+  ),
+);
 
-export default Router;
+export default router;

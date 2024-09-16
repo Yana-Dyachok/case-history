@@ -14,7 +14,7 @@ export default defineConfig(({ mode }) => {
       },
     },
     plugins: [react()],
-    base: '/case-history/',
+    base: '/',
     test: {
       globals: true,
       environment: 'jsdom',

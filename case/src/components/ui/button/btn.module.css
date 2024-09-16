@@ -1,39 +1,39 @@
 .btn {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    font-size: 2rem;
-    font-weight: 400;
-    line-height: 1;
-    color: var(--c-white);
-    background-color: var(--c-orange-300);
-    border-radius: 0.5rem;
-    box-shadow:
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--c-white);
+  background-color: var(--c-orange-300);
+  border-radius: 0.5rem;
+  box-shadow:
     inset 0 0.5rem 8rem rgba(232, 142, 69, 0.7),
     inset 0 0.5rem 1rem rgba(230, 133, 43, 0.9),
     inset 0 -0.5rem 1rem rgba(175, 96, 40, 0.8);
-    cursor: pointer;
-  }
+  cursor: pointer;
+}
 
-  .btn:active,
-  .btn:focus {
-    background-color: var(--c-orange-300);
-  }
+.btn:active,
+.btn:focus {
+  background-color: var(--c-orange-300);
+}
 
-  .btn:disabled {
-      border: none;
-      background-color: var(--c-gray);
-      box-shadow: none;
-      cursor: not-allowed;
-  }
+.btn:disabled {
+  border: none;
+  background-color: var(--c-gray);
+  box-shadow: none;
+  cursor: not-allowed;
+}
 
-  @media (hover: hover) and (pointer: fine) and (pointer: fine) {
-    .btn:hover:not([disabled]) {
-        background-color: var(--c-green-400);
-        box-shadow:
-        inset 0 0.5rem 8rem rgba(50, 227, 109, 0.7),
-        inset 0 0.5rem 1rem rgba(78, 231, 80, 0.9),
-        inset 0 -0.5rem 1rem rgba(3, 103, 49, 0.8);
-        filter: drop-shadow(0.3rem 0.3rem 1.3rem var(--c-mint-100));
-        transform: scale(1.1);
-    }
+@media (hover: hover) and (pointer: fine) and (pointer: fine) {
+  .btn:hover:not([disabled]) {
+    background-color: var(--c-green-400);
+    box-shadow:
+      inset 0 0.5rem 8rem rgba(50, 227, 109, 0.7),
+      inset 0 0.5rem 1rem rgba(78, 231, 80, 0.9),
+      inset 0 -0.5rem 1rem rgba(3, 103, 49, 0.8);
+    filter: drop-shadow(0.3rem 0.3rem 1.3rem var(--c-mint-100));
+    transform: scale(1.1);
+  }
 }

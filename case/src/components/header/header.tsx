@@ -11,7 +11,8 @@ function Header() {
 
   return (
     <header className={styles.headerMain}>
-      <LinkTemplateIcon to="/main" className={styles.iconMain} />
+      <LinkTemplateIcon to="/" className={styles.iconMain} />
+      {/* eslint-disable jsx-a11y/control-has-associated-label */}
       <button className={styles.burgerMenu} onClick={toggleMenu} type="button">
         <div
           className={

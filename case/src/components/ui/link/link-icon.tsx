@@ -27,4 +27,9 @@ function LinkTemplateIcon({ to, children, className }: LinkTemplateProps) {
   );
 }
 
+LinkTemplateIcon.defaultProps = {
+  children: null,
+  className: '',
+};
+
 export default LinkTemplateIcon;

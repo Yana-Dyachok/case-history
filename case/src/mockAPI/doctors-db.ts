@@ -35,7 +35,10 @@ const allImageUrls = {
 };
 
 const allDoctorsPdfUrls = {
-  gematologist_1: new URL('../assets/pdf-files/gematologist-konsilium.pdf', import.meta.url).href,
+  gematologist_1: new URL(
+    '../assets/pdf-files/gematologist-konsilium.pdf',
+    import.meta.url,
+  ).href,
 };
 
 const urologist: IDocuments = {
@@ -63,7 +66,7 @@ const mamologist: IDocuments = {
 const hematologist: IDocuments = {
   id: 'hematologist',
   imageUrlArray: [allImageUrls.hematologist_one],
-  pdfArray: [allDoctorsPdfUrls. gematologist_1],
+  pdfArray: [allDoctorsPdfUrls.gematologist_1],
 };
 
 const otolaryngologist: IDocuments = {

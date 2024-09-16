@@ -19,11 +19,11 @@
 
 .link:hover::before {
   width: 100%;
-  color: var( --c-orange-300);
+  color: var(--c-orange-300);
 }
 
 .link:hover {
-  color: var( --c-orange-300);
+  color: var(--c-orange-300);
 }
 
 .textLink {
@@ -36,7 +36,7 @@
 
 .textLink.activeLink {
   transition: all 0.4s ease-in;
-  color: var( --c-orange-300);
+  color: var(--c-orange-300);
 }
 
 .linkBlock:hover {
@@ -56,12 +56,12 @@
 
 .iconHeader.activeLink {
   transition: all 0.4s ease-in;
-  background-color: var( --c-orange-300);
+  background-color: var(--c-orange-300);
 }
 
 @media (max-width: 768px) {
   .textLink,
-  .link  {
+  .link {
     font-size: 2rem;
   }
 
@@ -69,4 +69,3 @@
     display: none;
   }
 }
-

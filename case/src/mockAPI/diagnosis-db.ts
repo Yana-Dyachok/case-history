@@ -48,10 +48,7 @@ const allPdfUrls = {
     '../assets/pdf-files/analysis/hepatit.pdf',
     import.meta.url,
   ).href,
-  hiv: new URL(
-    '../assets/pdf-files/analysis/hiv.pdf',
-    import.meta.url,
-  ).href,
+  hiv: new URL('../assets/pdf-files/analysis/hiv.pdf', import.meta.url).href,
   herpes: new URL(
     '../assets/pdf-files/analysis/herpes-cmv.pdf',
     import.meta.url,
@@ -119,8 +116,7 @@ const usabdomen: IDocuments = {
 const oro_bac_flora: IDocuments = {
   id: 'oro_bac_flora',
   imageUrlArray: [],
-  pdfArray: [allPdfUrls
-    .oro_bac_flora],
+  pdfArray: [allPdfUrls.oro_bac_flora],
 };
 
 const uro_bac_flora: IDocuments = {
@@ -161,5 +157,5 @@ export const infectionsArray: IDocuments[] = [
   uro_bac_flora,
   hepatitis,
   hiv,
-  herpes
+  herpes,
 ];
