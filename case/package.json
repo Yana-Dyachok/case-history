@@ -12,8 +12,8 @@
     "lint:fix": "eslint . --fix",
     "format:fix": "prettier . --write",
     "prettier": "prettier . --write",
-    "test": "vitest run --coverage",
     "predeploy": "npm run build",
+    "prepare": "cd .. && husky case/.husky",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
