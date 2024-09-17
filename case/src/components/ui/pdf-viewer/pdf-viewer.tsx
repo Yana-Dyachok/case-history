@@ -17,7 +17,9 @@ function PdfViewer({ pdfUrl, onLoad }: PdfProps) {
       <Viewer
         fileUrl={pdfUrl}
         plugins={[defaultLayoutPluginInstance]}
-        onDocumentLoad={onLoad}
+        onDocumentLoad={() => {
+          if (onLoad) onLoad();
+        }}
       />
     </Worker>
   );

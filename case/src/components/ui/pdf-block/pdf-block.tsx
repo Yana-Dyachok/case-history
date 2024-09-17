@@ -1,5 +1,5 @@
 import { useState, ChangeEvent } from 'react';
-import { Pagination, CircularProgress } from '@mui/material';
+import { Pagination } from '@mui/material';
 import { IDocumentProps } from '../../../types/interface';
 import PdfViewer from '../pdf-viewer/pdf-viewer';
 import Loading from '../loading/loading';
@@ -10,8 +10,10 @@ function PdfBlock({ documents }: IDocumentProps) {
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const handlePageChange = (_event: ChangeEvent<unknown>, value: number) => {
-    setPage(value);
-    setIsLoading(true);
+    if (value !== page) {
+      setPage(value);
+      setIsLoading(true);
+    }
   };
 
   const handlePdfLoad = () => {
@@ -19,7 +21,6 @@ function PdfBlock({ documents }: IDocumentProps) {
   };
 
   const currentPdfUrl = documents.pdfArray[page - 1];
-  if (isLoading) return <Loading />;
   return (
     <div className={styles.container}>
       <Pagination
@@ -38,11 +39,7 @@ function PdfBlock({ documents }: IDocumentProps) {
         onChange={handlePageChange}
       />
       <div className={styles.pdfBlock}>
-        {isLoading && (
-          <div className={styles.loader}>
-            <CircularProgress />
-          </div>
-        )}
+        {isLoading && <Loading />}
         {currentPdfUrl && (
           <div className={styles.pdfContainer}>
             <PdfViewer pdfUrl={currentPdfUrl} onLoad={handlePdfLoad} />
