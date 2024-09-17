@@ -1,5 +1,4 @@
 import { useLocation } from 'react-router-dom';
-import ImgSlider from '../../components/ui/each-img-slider/img-slider';
 import { IDocuments } from '../../types/interface';
 import doctorsArray from '../../mockAPI/doctors-db';
 import {
@@ -24,14 +23,6 @@ function ImgDocumentPage() {
     return <Loading />;
   }
 
-  return (
-    <div>
-      {documents.pdfArray.length > 0 ? (
-        <PdfSlider documents={documents} />
-      ) : (
-        <ImgSlider documents={documents} />
-      )}
-    </div>
-  );
+  return <PdfSlider documents={documents} />;
 }
 export default ImgDocumentPage;

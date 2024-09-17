@@ -23,7 +23,6 @@ export interface ILeucogram {
 
 export interface IDocuments {
   id: string;
-  imageUrlArray: string[];
   pdfArray: string[];
 }
 
@@ -36,12 +35,3 @@ export interface IPopUpProps {
   initialImageUrl: string;
   onClose: () => void;
 }
-
-// export interface IDocumentsPdf {
-//   id: string;
-//   pdfArray: string[];
-// }
-
-// export interface IDocumentPdfProps {
-//   documentsPdf: IDocumentsPdf;
-// }

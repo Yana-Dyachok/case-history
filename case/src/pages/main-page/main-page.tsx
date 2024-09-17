@@ -1,4 +1,4 @@
-import MainContent from '../../components/main-content/main-content';
+import MainContent from '../../components/base/main-content/main-content';
 
 function MainPage() {
   return <MainContent />;

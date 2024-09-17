@@ -1,0 +1,38 @@
+@import '../../../styles/colors.css';
+.container {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.imgBlock {
+  width: 28rem;
+  height: 30rem;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-size: 28rem;
+}
+
+.img {
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  width: 28rem;
+  height: 30rem;
+}
+
+.cardInfoBlock {
+  max-width: 40rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.2rem 0.5rem;
+}
+
+.cardTitle {
+  color: var(--c-orange-300);
+}

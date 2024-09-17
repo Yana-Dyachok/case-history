@@ -1,39 +1,24 @@
 import { IDocuments } from '../types/interface';
 
-const allImageUrls = {
-  fgds: new URL('../assets/img/diagnosis/fgds.jpg', import.meta.url).href,
-  sct_one: new URL('../assets/img/diagnosis/ckt-1.jpg', import.meta.url).href,
-  sct_two: new URL('../assets/img/diagnosis/ckt-2.jpg', import.meta.url).href,
-  usthyroid: new URL(
-    '../assets/img/diagnosis/ultrasound-tyreoid.jpg',
-    import.meta.url,
-  ).href,
-  usbreast: new URL(
-    '../assets/img/diagnosis/ultrasound-mamolog.jpg',
-    import.meta.url,
-  ).href,
-  echo: new URL('../assets/img/diagnosis/echo.jpg', import.meta.url).href,
-  usabdomen_one: new URL(
-    '../assets/img/diagnosis/ultrasound.jpg',
-    import.meta.url,
-  ).href,
-  usabdomen_two: new URL(
-    '../assets/img/diagnosis/ultrasound-2.jpg',
-    import.meta.url,
-  ).href,
-  uskidney: new URL('../assets/img/diagnosis/uretra.jpg', import.meta.url).href,
-};
-
 const allPdfUrls = {
-  petct_pdf_1: new URL('../assets/pdf-files/petct.pdf', import.meta.url).href,
-  pathistology_1: new URL(
-    '../assets/pdf-files/gistologia-2.pdf',
+  petct_pdf_1: new URL(
+    '../assets/pdf-files/diagnosis/petct.pdf',
     import.meta.url,
   ).href,
-  pathistology_2: new URL('../assets/pdf-files/gistologia.pdf', import.meta.url)
-    .href,
+  petct_pdf_2: new URL(
+    '../assets/pdf-files/diagnosis/petct-2.pdf',
+    import.meta.url,
+  ).href,
+  pathistology_1: new URL(
+    '../assets/pdf-files/diagnosis/gistologia-2.pdf',
+    import.meta.url,
+  ).href,
+  pathistology_2: new URL(
+    '../assets/pdf-files/diagnosis/gistologia.pdf',
+    import.meta.url,
+  ).href,
   pathistology_3: new URL(
-    '../assets/pdf-files/csd-lab-gistologia.pdf',
+    '../assets/pdf-files/diagnosis/csd-lab-gistologia.pdf',
     import.meta.url,
   ).href,
   oro_bac_flora: new URL(
@@ -53,29 +38,42 @@ const allPdfUrls = {
     '../assets/pdf-files/analysis/herpes-cmv.pdf',
     import.meta.url,
   ).href,
+  sct: new URL('../assets/pdf-files/diagnosis/ckt.pdf', import.meta.url).href,
+  fgds: new URL('../assets/pdf-files/diagnosis/fgds.pdf', import.meta.url).href,
+  usthyroid: new URL(
+    '../assets/pdf-files/diagnosis/ultrasound-tyreoid.pdf',
+    import.meta.url,
+  ).href,
+  usbreast: new URL(
+    '../assets/pdf-files/diagnosis/ultrasound-mamolog.pdf',
+    import.meta.url,
+  ).href,
+  echo: new URL('../assets/pdf-files/diagnosis/echo.pdf', import.meta.url).href,
+  usabdomen: new URL(
+    '../assets/pdf-files/diagnosis/ultrasound-abdomen.pdf',
+    import.meta.url,
+  ).href,
+  uskidney: new URL('../assets/pdf-files/diagnosis/uretra.pdf', import.meta.url)
+    .href,
 };
 
 const fgds: IDocuments = {
   id: 'fgds',
-  imageUrlArray: [allImageUrls.fgds],
-  pdfArray: [],
+  pdfArray: [allPdfUrls.fgds],
 };
 
 const sct: IDocuments = {
   id: 'sct',
-  imageUrlArray: [allImageUrls.sct_one, allImageUrls.sct_two],
-  pdfArray: [],
+  pdfArray: [allPdfUrls.sct],
 };
 
 const petct: IDocuments = {
   id: 'petct',
-  imageUrlArray: [],
-  pdfArray: [allPdfUrls.petct_pdf_1],
+  pdfArray: [allPdfUrls.petct_pdf_1, allPdfUrls.petct_pdf_2],
 };
 
 const pathistology: IDocuments = {
   id: 'pathistology',
-  imageUrlArray: [],
   pdfArray: [
     allPdfUrls.pathistology_1,
     allPdfUrls.pathistology_2,
@@ -85,61 +83,51 @@ const pathistology: IDocuments = {
 
 const usthyroid: IDocuments = {
   id: 'usthyroid',
-  imageUrlArray: [allImageUrls.usthyroid],
-  pdfArray: [],
+  pdfArray: [allPdfUrls.usthyroid],
 };
 
 const usbreast: IDocuments = {
   id: 'usbreast',
-  imageUrlArray: [allImageUrls.usbreast],
-  pdfArray: [],
+  pdfArray: [allPdfUrls.usbreast],
 };
 
 const uskidney: IDocuments = {
   id: 'uskidney',
-  imageUrlArray: [allImageUrls.uskidney],
-  pdfArray: [],
+  pdfArray: [allPdfUrls.uskidney],
 };
 
 const echo: IDocuments = {
   id: 'echo',
-  imageUrlArray: [allImageUrls.echo],
-  pdfArray: [],
+  pdfArray: [allPdfUrls.echo],
 };
 
 const usabdomen: IDocuments = {
   id: 'usabdomen',
-  imageUrlArray: [allImageUrls.usabdomen_one, allImageUrls.usabdomen_two],
-  pdfArray: [],
+  pdfArray: [allPdfUrls.usabdomen],
 };
 
 const oro_bac_flora: IDocuments = {
   id: 'oro_bac_flora',
-  imageUrlArray: [],
   pdfArray: [allPdfUrls.oro_bac_flora],
 };
 
 const uro_bac_flora: IDocuments = {
   id: 'uro_bac_flora',
-  imageUrlArray: [],
   pdfArray: [allPdfUrls.uro_bac_flora],
 };
 
 const hepatitis: IDocuments = {
   id: 'hepatitis',
-  imageUrlArray: [],
   pdfArray: [allPdfUrls.hepatitis],
 };
 
 const hiv: IDocuments = {
   id: 'hiv',
-  imageUrlArray: [],
   pdfArray: [allPdfUrls.hiv],
 };
 
 const herpes: IDocuments = {
   id: 'herpes',
-  imageUrlArray: [],
   pdfArray: [allPdfUrls.herpes],
 };
 

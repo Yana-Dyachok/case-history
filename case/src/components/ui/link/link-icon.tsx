@@ -4,11 +4,17 @@ import styles from './link.module.css';
 
 interface LinkTemplateProps {
   to: string;
+  /* eslint-disable react/require-default-props */
   children?: React.ReactNode;
+  /* eslint-disable react/require-default-props */
   className?: string;
 }
 
-function LinkTemplateIcon({ to, children, className }: LinkTemplateProps) {
+function LinkTemplateIcon({
+  to,
+  children = null,
+  className = '',
+}: LinkTemplateProps) {
   const location = useLocation();
   const segments = location.pathname.split('/');
   const isActiveLink = `/${segments[1]}` === to;
@@ -16,7 +22,7 @@ function LinkTemplateIcon({ to, children, className }: LinkTemplateProps) {
   return (
     <RouterLink to={to} className={styles.linkBlock}>
       <div
-        className={`${styles.iconHeader} ${className || ''} ${isActiveLink ? styles.activeLink : ''}`}
+        className={`${styles.iconHeader} ${className} ${isActiveLink ? styles.activeLink : ''}`}
       />
       <span
         className={`${styles.textLink} ${isActiveLink ? styles.activeLink : ''}`}
@@ -26,10 +32,5 @@ function LinkTemplateIcon({ to, children, className }: LinkTemplateProps) {
     </RouterLink>
   );
 }
-
-LinkTemplateIcon.defaultProps = {
-  children: null,
-  className: '',
-};
 
 export default LinkTemplateIcon;

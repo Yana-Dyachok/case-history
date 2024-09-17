@@ -22,6 +22,6 @@
     "noImplicitAny": true
   },
 
-  "include": [".eslintrc.cjs", "src", "./declarations.d.ts"],
+  "include": [".eslintrc.cjs", "src", "vite.config.ts", "src/app"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
