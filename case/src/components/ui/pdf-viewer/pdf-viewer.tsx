@@ -5,14 +5,20 @@ import '@react-pdf-viewer/default-layout/lib/styles/index.css';
 
 interface PdfProps {
   pdfUrl: string;
+  /* eslint-disable react/require-default-props */
+  onLoad?: () => void;
 }
 
-function PdfViewer({ pdfUrl }: PdfProps) {
+function PdfViewer({ pdfUrl, onLoad }: PdfProps) {
   const defaultLayoutPluginInstance = defaultLayoutPlugin();
 
   return (
     <Worker workerUrl="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js">
-      <Viewer fileUrl={pdfUrl} plugins={[defaultLayoutPluginInstance]} />
+      <Viewer
+        fileUrl={pdfUrl}
+        plugins={[defaultLayoutPluginInstance]}
+        onDocumentLoad={onLoad}
+      />
     </Worker>
   );
 }
