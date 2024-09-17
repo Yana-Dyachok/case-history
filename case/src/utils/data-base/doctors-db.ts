@@ -1,37 +1,37 @@
-import { IDocuments } from '../types/interface';
+import { IDocuments } from '../../types/interface';
 
 const allDoctorsPdfUrls = {
   hematologist_1: new URL(
-    '../assets/pdf-files/doctors/gematologist-konsilium.pdf',
+    '../../assets/pdf-files/doctors/gematologist-konsilium.pdf',
     import.meta.url,
   ).href,
   hematologist_2: new URL(
-    '../assets/pdf-files/doctors/hematolog-cancer-univer.pdf',
+    '../../assets/pdf-files/doctors/hematolog-cancer-univer.pdf',
     import.meta.url,
   ).href,
-  oksana: new URL('../assets/pdf-files/oksana.pdf', import.meta.url).href,
+  oksana: new URL('../../assets/pdf-files/oksana.pdf', import.meta.url).href,
   uretraTreatment: new URL(
-    '../assets/pdf-files/treatment/uretra-treatment.pdf',
+    '../../assets/pdf-files/treatment/uretra-treatment.pdf',
     import.meta.url,
   ).href,
   family_doctor_one: new URL(
-    '../assets/pdf-files/doctors/family-one.pdf',
+    '../../assets/pdf-files/doctors/family-one.pdf',
     import.meta.url,
   ).href,
   family_doctor_two: new URL(
-    '../assets/pdf-files/doctors/family-two.pdf',
+    '../../assets/pdf-files/doctors/family-two.pdf',
     import.meta.url,
   ).href,
   uretra_doctor: new URL(
-    '../assets/pdf-files/doctors/uretra-doctor.pdf',
+    '../../assets/pdf-files/doctors/uretra-doctor.pdf',
     import.meta.url,
   ).href,
   mamologist: new URL(
-    '../assets/pdf-files/doctors/mamologist.pdf',
+    '../../assets/pdf-files/doctors/mamologist.pdf',
     import.meta.url,
   ).href,
   otolaryngologist_one: new URL(
-    '../assets/pdf-files/doctors/otolar.pdf',
+    '../../assets/pdf-files/doctors/otolar.pdf',
     import.meta.url,
   ).href,
 };

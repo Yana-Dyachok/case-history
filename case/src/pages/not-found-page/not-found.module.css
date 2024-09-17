@@ -1,12 +1,9 @@
-@import '../../styles/colors.css';
 .errorBlock {
-  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  overflow-x: hidden;
 }
 
 .errorContainer {

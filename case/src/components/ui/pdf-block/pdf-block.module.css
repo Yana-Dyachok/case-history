@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.pdfBlock {
+  position: relative;
+  min-width: 60rem;
+  display: flex;
+}
+
+.pdfContainer {
+  min-width: 60rem;
+}
+
+@media (max-width: 990px) {
+  .pdfBlock {
+    min-width: 50rem;
+  }
+  .pdfContainer {
+    min-width: 50rem;
+  }
+}
+
+@media (max-width: 820px) {
+  .pdfBlock {
+    min-width: 40rem;
+  }
+  .pdfContainer {
+    min-width: 40rem;
+  }
+}
+
+@media (max-width: 660px) {
+  .pdfBlock {
+    min-width: 30rem;
+  }
+  .pdfContainer {
+    min-width: 30rem;
+  }
+}
+
+@media (max-width: 485px) {
+  .pdfBlock {
+    min-width: 23rem;
+  }
+  .pdfContainer {
+    min-width: 23rem;
+  }
+}

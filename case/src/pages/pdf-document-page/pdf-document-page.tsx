@@ -1,15 +1,15 @@
 import { useLocation } from 'react-router-dom';
 import { IDocuments } from '../../types/interface';
-import doctorsArray from '../../mockAPI/doctors-db';
+import doctorsArray from '../../utils/data-base/doctors-db';
 import {
   diagnosisArray,
   ultrasoundArray,
   infectionsArray,
-} from '../../mockAPI/diagnosis-db';
-import PdfSlider from '../../components/ui/pdf-slider/pdf-slider';
+} from '../../utils/data-base/diagnosis-db';
+import PdfBlock from '../../components/ui/pdf-block/pdf-block';
 import Loading from '../../components/ui/loading/loading';
 
-function ImgDocumentPage() {
+function PdfDocumentPage() {
   const location = useLocation();
   const segments = location.pathname.split('/');
   const id = segments[segments.length - 1];
@@ -23,6 +23,6 @@ function ImgDocumentPage() {
     return <Loading />;
   }
 
-  return <PdfSlider documents={documents} />;
+  return <PdfBlock documents={documents} />;
 }
-export default ImgDocumentPage;
+export default PdfDocumentPage;

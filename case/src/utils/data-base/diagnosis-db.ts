@@ -1,60 +1,65 @@
-import { IDocuments } from '../types/interface';
+import { IDocuments } from '../../types/interface';
 
 const allPdfUrls = {
   petct_pdf_1: new URL(
-    '../assets/pdf-files/diagnosis/petct.pdf',
+    '../../assets/pdf-files/diagnosis/petct.pdf',
     import.meta.url,
   ).href,
   petct_pdf_2: new URL(
-    '../assets/pdf-files/diagnosis/petct-2.pdf',
+    '../../assets/pdf-files/diagnosis/petct-2.pdf',
     import.meta.url,
   ).href,
   pathistology_1: new URL(
-    '../assets/pdf-files/diagnosis/gistologia-2.pdf',
+    '../../assets/pdf-files/diagnosis/gistologia-2.pdf',
     import.meta.url,
   ).href,
   pathistology_2: new URL(
-    '../assets/pdf-files/diagnosis/gistologia.pdf',
+    '../../assets/pdf-files/diagnosis/gistologia.pdf',
     import.meta.url,
   ).href,
   pathistology_3: new URL(
-    '../assets/pdf-files/diagnosis/csd-lab-gistologia.pdf',
+    '../../assets/pdf-files/diagnosis/csd-lab-gistologia.pdf',
     import.meta.url,
   ).href,
   oro_bac_flora: new URL(
-    '../assets/pdf-files/analysis/oro-bak.pdf',
+    '../../assets/pdf-files/analysis/oro-bak.pdf',
     import.meta.url,
   ).href,
   uro_bac_flora: new URL(
-    '../assets/pdf-files/analysis/uro-analisis.pdf',
+    '../../assets/pdf-files/analysis/uro-analisis.pdf',
     import.meta.url,
   ).href,
   hepatitis: new URL(
-    '../assets/pdf-files/analysis/hepatit.pdf',
+    '../../assets/pdf-files/analysis/hepatit.pdf',
     import.meta.url,
   ).href,
-  hiv: new URL('../assets/pdf-files/analysis/hiv.pdf', import.meta.url).href,
+  hiv: new URL('../../assets/pdf-files/analysis/hiv.pdf', import.meta.url).href,
   herpes: new URL(
-    '../assets/pdf-files/analysis/herpes-cmv.pdf',
+    '../../assets/pdf-files/analysis/herpes-cmv.pdf',
     import.meta.url,
   ).href,
-  sct: new URL('../assets/pdf-files/diagnosis/ckt.pdf', import.meta.url).href,
-  fgds: new URL('../assets/pdf-files/diagnosis/fgds.pdf', import.meta.url).href,
+  sct: new URL('../../assets/pdf-files/diagnosis/ckt.pdf', import.meta.url)
+    .href,
+  fgds: new URL('../../assets/pdf-files/diagnosis/fgds.pdf', import.meta.url)
+    .href,
   usthyroid: new URL(
-    '../assets/pdf-files/diagnosis/ultrasound-tyreoid.pdf',
+    '../../assets/pdf-files/diagnosis/ultrasound-tyreoid.pdf',
     import.meta.url,
   ).href,
   usbreast: new URL(
-    '../assets/pdf-files/diagnosis/ultrasound-mamolog.pdf',
+    '../../assets/pdf-files/diagnosis/ultrasound-mamolog.pdf',
     import.meta.url,
   ).href,
-  echo: new URL('../assets/pdf-files/diagnosis/echo.pdf', import.meta.url).href,
-  usabdomen: new URL(
-    '../assets/pdf-files/diagnosis/ultrasound-abdomen.pdf',
-    import.meta.url,
-  ).href,
-  uskidney: new URL('../assets/pdf-files/diagnosis/uretra.pdf', import.meta.url)
+  echo: new URL('../../assets/pdf-files/diagnosis/echo.pdf', import.meta.url)
     .href,
+  usabdomen: new URL(
+    '../../assets/pdf-files/diagnosis/ultrasound-abdomen.pdf',
+    import.meta.url,
+  ).href,
+  uskidney: new URL(
+    '../../assets/pdf-files/diagnosis/uretra.pdf',
+    import.meta.url,
+  ).href,
 };
 
 const fgds: IDocuments = {

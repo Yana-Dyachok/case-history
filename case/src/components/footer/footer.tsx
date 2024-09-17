@@ -1,13 +1,10 @@
-import LinkTemplateIcon from '../ui/link/link-icon';
+import { Link } from 'react-router-dom';
 import styles from './footer.module.css';
 
 function Footer() {
   return (
     <footer className={styles.footer}>
-      <LinkTemplateIcon
-        to="https://t.me/Oksirets"
-        className={styles.iconTelegram}
-      />
+      <Link to="https://t.me/Oksirets" className={styles.iconTelegram} />
     </footer>
   );
 }

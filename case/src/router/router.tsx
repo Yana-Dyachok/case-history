@@ -12,7 +12,7 @@ import AnalysisPage from '../pages/analysis/analysis-page';
 import DiagnosisPage from '../pages/diagnosis/diagnosis-page';
 import DoctorsPage from '../pages/doctors/doctors-page';
 import TreatmentPage from '../pages/treatment/treatment-page';
-import ImgDocumentPage from '../pages/img-document-page/img-document-page';
+import PdfDocumentPage from '../pages/pdf-document-page/pdf-document-page';
 import UltrasoundPage from '../pages/ultrasound/ultrasound-page';
 import InfectionsPage from '../pages/infections-page/infections-page';
 
@@ -23,15 +23,15 @@ const router = createBrowserRouter(
       <Route path="/anamnesis-morbi" element={<AnamnesisMorbiPage />} />
       <Route path="/anamnesis-vite" element={<AnamnesisVitePage />} />
       <Route path="/analysis" element={<AnalysisPage />} />
-      <Route path="/analysis/*" element={<ImgDocumentPage />} />
+      <Route path="/analysis/*" element={<PdfDocumentPage />} />
       <Route path="/diagnosis" element={<DiagnosisPage />} />
       <Route path="/diagnosis/ultrasound/*" element={<UltrasoundPage />} />
-      <Route path="/diagnosis/*" element={<ImgDocumentPage />} />
+      <Route path="/diagnosis/*" element={<PdfDocumentPage />} />
       <Route path="/treatment" element={<TreatmentPage />} />
       <Route path="/consultations" element={<DoctorsPage />} />
-      <Route path="/consultations/*" element={<ImgDocumentPage />} />
+      <Route path="/consultations/*" element={<PdfDocumentPage />} />
       <Route path="/analysis/infections/" element={<InfectionsPage />} />
-      <Route path="/analysis/infections/*" element={<ImgDocumentPage />} />
+      <Route path="/analysis/infections/*" element={<PdfDocumentPage />} />
       <Route path="/*" element={<NotFoundPage />} />
     </Route>,
   ),
