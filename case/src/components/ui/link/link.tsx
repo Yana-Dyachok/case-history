@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link as RouterLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styles from './link.module.css';
 
 interface LinkTemplateProps {
@@ -9,9 +9,9 @@ interface LinkTemplateProps {
 
 function LinkTemplate({ to, children }: LinkTemplateProps) {
   return (
-    <RouterLink to={to} className={styles.link}>
+    <Link to={to} className={styles.link}>
       {children}
-    </RouterLink>
+    </Link>
   );
 }
 

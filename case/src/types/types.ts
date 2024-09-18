@@ -12,3 +12,5 @@ export type Neutrophils = {
   Young?: number | 0;
   Reticulocytes?: number | 0;
 };
+
+export type PathDataType = { [key: string]: string };

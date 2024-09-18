@@ -25,7 +25,7 @@ const router = createBrowserRouter(
       <Route path="/analysis" element={<AnalysisPage />} />
       <Route path="/analysis/*" element={<PdfDocumentPage />} />
       <Route path="/diagnosis" element={<DiagnosisPage />} />
-      <Route path="/diagnosis/ultrasound/*" element={<UltrasoundPage />} />
+      <Route path="/diagnosis/ultrasound/" element={<UltrasoundPage />} />
       <Route path="/diagnosis/*" element={<PdfDocumentPage />} />
       <Route path="/treatment" element={<TreatmentPage />} />
       <Route path="/consultations" element={<DoctorsPage />} />
