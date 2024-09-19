@@ -1,18 +1,13 @@
 import Tags from '../ui/tags/tags';
+import { PathDataType } from '../../types/types';
 import styles from './data-table.module.css';
 
-type DataRow = {
-  date: string;
-  name: string;
-  [key: string]: string;
-};
-
-interface ITableProps<T extends DataRow> {
+interface ITableProps<T extends PathDataType> {
   data: T[];
   title: string;
 }
 
-function DataTable<T extends DataRow>({ data, title }: ITableProps<T>) {
+function DataTable<T extends PathDataType>({ data, title }: ITableProps<T>) {
   if (!data || data.length === 0) {
     return <div>Немає даних для відображення</div>;
   }
@@ -33,10 +28,11 @@ function DataTable<T extends DataRow>({ data, title }: ITableProps<T>) {
           </tr>
         </thead>
         <tbody>
-          {data.map((row) => (
-            <tr key={row.date}>
+          {data.map((row, rowIndex) => (
+            <tr key={row.date || rowIndex}>
               {headers.map((header) => (
-                <td key={header} className={styles.td}>
+                /* eslint-disable react/no-array-index-key */
+                <td key={`${rowIndex}-${header}`} className={styles.td}>
                   {row[header]}
                 </td>
               ))}
