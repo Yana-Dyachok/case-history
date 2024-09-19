@@ -1,0 +1,21 @@
+.tableBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.table {
+  border-collapse: collapse;
+}
+
+.td,
+.th {
+  border: 0.05rem solid var(--c-green-400);
+  padding: 1rem;
+  text-align: center;
+}
+
+.th {
+  font-weight: bold;
+  color: var(--c-orange-300);
+}

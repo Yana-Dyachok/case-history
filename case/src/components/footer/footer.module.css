@@ -1,14 +1,15 @@
 .footer {
   height: 10vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   align-items: center;
+  gap: 2rem;
   padding: 1rem;
   background-color: var(--c-green-600);
   color: var(--c-white);
 }
 
-.iconTelegram {
+.icon {
   min-width: 2rem;
   height: 2rem;
   mask-repeat: no-repeat;
@@ -16,4 +17,16 @@
   mask-position: center;
   background-color: var(--c-white);
   mask-image: url('../../assets/svg-icons/telegram.svg');
+}
+
+.iconTelegram {
+  mask-image: url('../../assets/svg-icons/telegram.svg');
+}
+
+.iconPhone {
+  mask-image: url('../../assets/svg-icons/phone.svg');
+}
+
+.iconMail {
+  mask-image: url('../../assets/svg-icons/mail.svg');
 }

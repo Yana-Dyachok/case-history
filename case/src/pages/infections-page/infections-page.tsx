@@ -1,5 +1,5 @@
 import AllLinks from '../../components/ui/all-links/all-links';
-import { infectionsType } from './infections';
+import infectionsType from './infections';
 
 function InfectionsPage() {
   const kindOf = 'analysis/infections';

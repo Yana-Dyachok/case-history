@@ -1,12 +1,6 @@
-export type DiagnosisTypeKeys =
-  | 'ultrasound'
-  | 'fgds'
-  | 'sct'
-  | 'petct'
-  | 'ecg'
-  | 'pathistology';
+import { PathDataType } from '../../types/types';
 
-export const diagnosisType: Record<DiagnosisTypeKeys, string> = {
+const diagnosisType: PathDataType = {
   ultrasound: 'УЗД',
   fgds: 'ФГДС + h.pylori',
   sct: 'СКТ',
@@ -14,3 +8,4 @@ export const diagnosisType: Record<DiagnosisTypeKeys, string> = {
   ecg: 'ЕКГ',
   pathistology: 'Патогістологічне дослідження ',
 };
+export default diagnosisType;

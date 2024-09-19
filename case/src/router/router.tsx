@@ -15,6 +15,7 @@ import TreatmentPage from '../pages/treatment/treatment-page';
 import PdfDocumentPage from '../pages/pdf-document-page/pdf-document-page';
 import UltrasoundPage from '../pages/ultrasound/ultrasound-page';
 import InfectionsPage from '../pages/infections-page/infections-page';
+import TableComponent from '../components/table-component/table-component';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,7 +24,7 @@ const router = createBrowserRouter(
       <Route path="/anamnesis-morbi" element={<AnamnesisMorbiPage />} />
       <Route path="/anamnesis-vite" element={<AnamnesisVitePage />} />
       <Route path="/analysis" element={<AnalysisPage />} />
-      <Route path="/analysis/*" element={<PdfDocumentPage />} />
+      <Route path="/analysis/*" element={<TableComponent />} />
       <Route path="/diagnosis" element={<DiagnosisPage />} />
       <Route path="/diagnosis/ultrasound/" element={<UltrasoundPage />} />
       <Route path="/diagnosis/*" element={<PdfDocumentPage />} />

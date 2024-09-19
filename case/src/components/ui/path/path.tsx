@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import LinkTemplate from '../link/link';
 import PathData from '../../../utils/const/path-data';
-import styles from './path-comp.module.css';
+import styles from './path.module.css';
 
 interface PathElement {
   value: string | JSX.Element;

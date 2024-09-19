@@ -6,7 +6,7 @@ import {
   ultrasoundArray,
   infectionsArray,
 } from '../../utils/data-base/diagnosis-db';
-import PdfBlock from '../../components/ui/pdf-block/pdf-block';
+import PdfBlock from '../../components/pdf-block/pdf-block';
 import Loading from '../../components/ui/loading/loading';
 
 function PdfDocumentPage() {

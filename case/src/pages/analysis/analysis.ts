@@ -1,12 +1,9 @@
-export type AnalysisTypeKeys =
-  | 'general'
-  | 'biochemistry'
-  | 'urina'
-  | 'infections';
+import { PathDataType } from '../../types/types';
 
-export const analysisType: Record<AnalysisTypeKeys, string> = {
+const analysisType: PathDataType = {
   general: 'Загальний Аналіз Крові',
   biochemistry: 'Біохімічний Аналіз Крові',
   urina: 'Загальний Аналіз Сечі',
   infections: 'На Інфекційні Захворювання',
 };
+export default analysisType;

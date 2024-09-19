@@ -1,14 +1,11 @@
-export type DoctorsTypeKeys =
-  | 'familydoctor'
-  | 'otolaryngologist'
-  | 'urologist'
-  | 'hematologist'
-  | 'mamologist';
+import { PathDataType } from '../../types/types';
 
-export const doctorsType: Record<DoctorsTypeKeys, string> = {
+const doctorsType: PathDataType = {
   familydoctor: 'Огляд сімейного лікаря',
   otolaryngologist: 'Огляд ЛОРа',
   urologist: 'Огляд уролога',
   hematologist: 'Огляд гематолога',
   mamologist: 'Огляд мамолога',
 };
+
+export default doctorsType;

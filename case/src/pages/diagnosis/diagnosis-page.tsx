@@ -1,5 +1,5 @@
 import AllLinks from '../../components/ui/all-links/all-links';
-import { diagnosisType } from './diagnosis';
+import diagnosisType from './diagnosis';
 
 function DiagnosisPage() {
   const kindOf = 'diagnosis';
