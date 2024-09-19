@@ -10,15 +10,6 @@
   font-size: 2rem;
 }
 
-.container {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 2rem;
-}
-
 @media (max-width: 580px) {
   .title {
     font-size: 2rem;

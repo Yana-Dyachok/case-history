@@ -4,8 +4,10 @@ html {
 }
 
 #root {
-  max-width: 1920px;
+  position: relative;
   margin: 0 auto;
+  background-color: var(--c-yelow);
+  overflow-x: hidden;
 }
 
 body {
@@ -17,8 +19,6 @@ body {
   -webkit-text-size-adjust: 100%;
   line-height: 1.5;
   color: var(--c-green-600);
-  background-color: var(--c-yelow);
-  overflow-x: hidden;
 }
 
 @media (max-width: 580px) {

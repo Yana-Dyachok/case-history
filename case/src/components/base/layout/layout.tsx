@@ -9,7 +9,7 @@ import styles from './layout.module.css';
 function Layout() {
   const { scrollToTop } = useScrollTo();
   const [ref, inView] = useInView({
-    threshold: 1,
+    threshold: 1.0,
     triggerOnce: false,
   });
 
@@ -24,7 +24,7 @@ function Layout() {
           type="button"
           aria-label="scroll-button"
           onClick={scrollToTop}
-          className={`${styles.scrollTo} ${inView ? styles.show : ''}`}
+          className={`${styles.scrollTo} ${!inView ? styles.show : ''}`}
         />
       </main>
       <Footer />
