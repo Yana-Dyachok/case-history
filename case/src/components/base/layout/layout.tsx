@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import { useInView } from 'react-intersection-observer';
+import { useRef, useEffect, useState } from 'react';
 import Header from '../../header/header';
 import Footer from '../../footer/footer';
 import Path from '../../ui/path/path';
@@ -8,27 +8,47 @@ import styles from './layout.module.css';
 
 function Layout() {
   const { scrollToTop } = useScrollTo();
-  const [ref, inView] = useInView({
-    threshold: 1.0,
-    triggerOnce: false,
-  });
+  const [isVisible, setIsVisible] = useState(false);
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(!entry.isIntersecting);
+      },
+      { threshold: [1] },
+    );
+
+    const currentScroll = scrollRef.current;
+
+    if (currentScroll) {
+      observer.observe(currentScroll);
+    }
+
+    return () => {
+      if (currentScroll) {
+        observer.unobserve(currentScroll);
+      }
+    };
+  }, []);
 
   return (
-    <>
+    <div ref={scrollRef}>
       <Header />
       <main className={styles.container}>
         <Path />
         <Outlet />
-        <div ref={ref} />
-        <button
-          type="button"
-          aria-label="scroll-button"
-          onClick={scrollToTop}
-          className={`${styles.scrollTo} ${!inView ? styles.show : ''}`}
-        />
+        {isVisible && (
+          <button
+            type="button"
+            aria-label="scroll-button"
+            onClick={scrollToTop}
+            className={styles.scrollTo}
+          />
+        )}
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
 
