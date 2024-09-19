@@ -1,4 +1,4 @@
-import AllLinks from '../../components/ui/all-links/all-links';
+import AllLinks from '../../components/all-links/all-links';
 import infectionsType from './infections';
 
 function InfectionsPage() {

@@ -1,7 +1,7 @@
 .footer {
   height: 10vh;
   display: flex;
-  justify-content: end;
+  justify-content: start;
   align-items: center;
   gap: 2rem;
   padding: 1rem;
@@ -16,7 +16,6 @@
   mask-size: contain;
   mask-position: center;
   background-color: var(--c-white);
-  mask-image: url('../../assets/svg-icons/telegram.svg');
 }
 
 .iconTelegram {

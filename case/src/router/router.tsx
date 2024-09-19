@@ -3,7 +3,7 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from 'react-router-dom';
-import Layout from '../components/layout/layout';
+import Layout from '../components/base/layout/layout';
 import MainPage from '../pages/main-page/main-page';
 import NotFoundPage from '../pages/not-found-page/not-found-page';
 import AnamnesisMorbiPage from '../pages/anamnesis-morbi/anamnesis-morbi';

@@ -1,0 +1,31 @@
+.container {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.scrollTo {
+  position: fixed;
+  bottom: 7%;
+  right: 1%;
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--c-orange-300);
+  border-radius: 50%;
+  background-image: url('../../../assets/svg-icons/scroll-top.svg');
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+.scrollTo.show {
+  opacity: 1;
+  visibility: visible;
+}

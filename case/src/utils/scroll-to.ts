@@ -1,4 +1,4 @@
-function useScrollToTop() {
+function useScrollTo() {
   const scrollToTop = (): void => {
     window.scrollTo({
       top: 0,
@@ -8,4 +8,5 @@ function useScrollToTop() {
 
   return { scrollToTop };
 }
-export default useScrollToTop;
+
+export default useScrollTo;

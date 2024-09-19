@@ -1,4 +1,5 @@
-import LinkTemplate from '../link/link';
+import LinkTemplate from '../ui/link/link';
+import Tags from '../ui/tags/tags';
 import styles from './all-links.module.css';
 
 interface DocumentKindProps {
@@ -11,7 +12,7 @@ function AllLinks({ kind, documentType }: DocumentKindProps) {
     <div className={styles.container}>
       {Object.keys(documentType).map((key) => (
         <LinkTemplate key={key} to={`/${kind}/${key}`}>
-          {documentType[key]}
+          <Tags.H2>{documentType[key]}</Tags.H2>
         </LinkTemplate>
       ))}
     </div>

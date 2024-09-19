@@ -23,7 +23,7 @@ function Path() {
     pathElements.push({ value: translatedValue, link: cumulativePath });
   });
 
-  return pathElements.length > 2 ? (
+  return pathElements.length > 1 ? (
     <ul className={styles.pathContainer}>
       {pathElements.map((elem: PathElement, index) => {
         const getSlash = index !== pathElements.length - 1 ? ' / ' : '';

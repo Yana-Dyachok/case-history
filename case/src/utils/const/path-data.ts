@@ -29,6 +29,7 @@ const PathData: PathDataType = {
   diagnosis: 'Діагностика',
   consultations: 'Лікарі',
   analysis: 'Аналізи',
+  treatment: 'Лікування',
 };
 
 export default PathData;
