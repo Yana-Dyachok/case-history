@@ -6,6 +6,7 @@ import {
   ultrasoundArray,
   infectionsArray,
 } from '../../utils/data-base/diagnosis-db';
+import treatmentArray from '../../utils/data-base/treatment-db';
 import PdfBlock from '../../components/pdf-block/pdf-block';
 import Loading from '../../components/ui/loading/loading';
 
@@ -18,6 +19,7 @@ function PdfDocumentPage() {
     ...doctorsArray,
     ...ultrasoundArray,
     ...infectionsArray,
+    ...treatmentArray,
   ].find((el) => el.id === id);
   if (!documents) {
     return <Loading />;

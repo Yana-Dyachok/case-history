@@ -2,6 +2,8 @@ import Button from '../../components/ui/button/button';
 import Tags from '../../components/ui/tags/tags';
 import styles from './not-found.module.css';
 
+export const handle = { hidePath: true };
+
 function NotFoundPage() {
   return (
     <div className={styles.errorBlock}>

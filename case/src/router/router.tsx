@@ -29,11 +29,12 @@ const router = createBrowserRouter(
       <Route path="/diagnosis/ultrasound/" element={<UltrasoundPage />} />
       <Route path="/diagnosis/*" element={<PdfDocumentPage />} />
       <Route path="/treatment" element={<TreatmentPage />} />
+      <Route path="/treatment/*" element={<PdfDocumentPage />} />
       <Route path="/consultations" element={<DoctorsPage />} />
       <Route path="/consultations/*" element={<PdfDocumentPage />} />
       <Route path="/analysis/infections/" element={<InfectionsPage />} />
       <Route path="/analysis/infections/*" element={<PdfDocumentPage />} />
-      <Route path="/*" element={<NotFoundPage />} />
+      <Route path="*" element={<NotFoundPage />} handle={{ hidePath: true }} />
     </Route>,
   ),
 );

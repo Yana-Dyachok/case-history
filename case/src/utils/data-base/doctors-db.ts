@@ -34,6 +34,14 @@ const allDoctorsPdfUrls = {
     '../../assets/pdf-files/doctors/otolar.pdf',
     import.meta.url,
   ).href,
+  otolaryngologist_two: new URL(
+    '../../assets/pdf-files/doctors/otolar_2.pdf',
+    import.meta.url,
+  ).href,
+  otolaryngologist_three: new URL(
+    '../../assets/pdf-files/doctors/otolar_3.pdf',
+    import.meta.url,
+  ).href,
 };
 
 const urologist: IDocuments = {
@@ -64,7 +72,11 @@ const hematologist: IDocuments = {
 
 const otolaryngologist: IDocuments = {
   id: 'otolaryngologist',
-  pdfArray: [allDoctorsPdfUrls.otolaryngologist_one],
+  pdfArray: [
+    allDoctorsPdfUrls.otolaryngologist_one,
+    allDoctorsPdfUrls.otolaryngologist_two,
+    allDoctorsPdfUrls.otolaryngologist_three,
+  ],
 };
 
 const doctorsArray: IDocuments[] = [

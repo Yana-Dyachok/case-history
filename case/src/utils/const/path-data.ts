@@ -32,6 +32,7 @@ const pathData: PathDataType = {
   consultations: 'Лікарі',
   analysis: 'Аналізи',
   treatment: 'Лікування',
+  otosurgery: 'Оперативне втручання',
 };
 
 export default pathData;

@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, useMatches } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Header from '../../header/header';
 import Footer from '../../footer/footer';
@@ -9,6 +9,12 @@ import styles from './layout.module.css';
 function Layout() {
   const [showTopBtn, setShowTopBtn] = useState(false);
   const { scrollToTop } = useScrollTo();
+  const matches = useMatches();
+
+  const isErrorPage = matches.some(
+    (match) => (match.handle as { hidePath?: boolean })?.hidePath,
+  );
+
   useEffect(() => {
     let scrollTimeout: number | undefined;
 
@@ -34,9 +40,9 @@ function Layout() {
 
   return (
     <div>
-      <Header />
+      {!isErrorPage && <Header />}
       <main className={styles.container}>
-        <Path />
+        {!isErrorPage && <Path />}
         <Outlet />
         {showTopBtn && (
           <button
@@ -47,7 +53,7 @@ function Layout() {
           />
         )}
       </main>
-      <Footer />
+      {!isErrorPage && <Footer />}
     </div>
   );
 }

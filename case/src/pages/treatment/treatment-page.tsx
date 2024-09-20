@@ -1,5 +1,9 @@
+import AllLinks from '../../components/all-links/all-links';
+import treatmentType from './treatment';
+
 function TreatmentPage() {
-  return <div />;
+  const kindOf = 'treatment';
+  return <AllLinks kind={kindOf} documentType={treatmentType} />;
 }
 
 export default TreatmentPage;
