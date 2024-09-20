@@ -1,6 +1,6 @@
 import { PathDataType } from '../../types/types';
 
-const PathData: PathDataType = {
+const pathData: PathDataType = {
   ultrasound: 'УЗД',
   fgds: 'ФГДС + h.pylori',
   sct: 'СКТ',
@@ -16,8 +16,10 @@ const PathData: PathDataType = {
   urina: 'Загальний Аналіз Сечі',
   infections: 'На Інфекційні Захворювання',
   uskidney: 'УЗД нирок та сечовивідних шляхів',
-  oro_bac_flora: 'Бакпосів із мигдалин',
+  oro_bac_flora: 'Бакпосів із зіву',
   uro_bac_flora: 'Бакпосів сечі на мікрофлору',
+  aslo: 'Антистрептолізин-О (АСЛ-О)',
+  igG: 'Концентрація IgG в сироватці крові',
   hepatitis: 'Гепатити',
   hiv: 'Вірус імунодефіциту людини',
   herpes: 'Герпес віруси',
@@ -32,4 +34,4 @@ const PathData: PathDataType = {
   treatment: 'Лікування',
 };
 
-export default PathData;
+export default pathData;

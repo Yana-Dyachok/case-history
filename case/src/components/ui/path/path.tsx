@@ -2,7 +2,7 @@ import { useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import LinkTemplate from '../link/link';
-import PathData from '../../../utils/const/path-data';
+import pathData from '../../../utils/const/path-data';
 import styles from './path.module.css';
 
 interface PathElement {
@@ -18,8 +18,8 @@ function Path() {
   let cumulativePath = '';
   pathArray.forEach((segment) => {
     cumulativePath += `/${segment}`;
-    const keyData = Object.keys(PathData).find((key) => key === segment);
-    const translatedValue = keyData ? PathData[keyData] : segment;
+    const keyData = Object.keys(pathData).find((key) => key === segment);
+    const translatedValue = keyData ? pathData[keyData] : segment;
     pathElements.push({ value: translatedValue, link: cumulativePath });
   });
 

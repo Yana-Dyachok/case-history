@@ -6,6 +6,8 @@ const infectionsType: PathDataType = {
   hepatitis: 'Гепатити',
   hiv: 'Вірус імунодефіциту людини',
   herpes: 'Герпес віруси',
+  aslo: 'Антистрептолізин-О (АСЛ-О)',
+  igG: 'Концентрація IgG в сироватці крові',
 };
 
 export default infectionsType;

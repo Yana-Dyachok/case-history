@@ -1,4 +1,4 @@
-const urina = [
+const general = [
   {
     Дата: '25.06.24',
     Колір: 'С/Ж',
@@ -30,4 +30,4 @@ const urina = [
     Солі: 'Поод.',
   },
 ];
-export default urina;
+export default general;

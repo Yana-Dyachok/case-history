@@ -15,7 +15,7 @@ import TreatmentPage from '../pages/treatment/treatment-page';
 import PdfDocumentPage from '../pages/pdf-document-page/pdf-document-page';
 import UltrasoundPage from '../pages/ultrasound/ultrasound-page';
 import InfectionsPage from '../pages/infections-page/infections-page';
-import TableComponent from '../components/table-component/table-component';
+import TableComponent from '../components/base/table-component/table-component';
 
 const router = createBrowserRouter(
   createRoutesFromElements(

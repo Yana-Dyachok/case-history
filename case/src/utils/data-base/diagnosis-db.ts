@@ -21,8 +21,12 @@ const allPdfUrls = {
     '../../assets/pdf-files/diagnosis/csd-lab-gistologia.pdf',
     import.meta.url,
   ).href,
-  oro_bac_flora: new URL(
+  oro_bac_flora_1: new URL(
     '../../assets/pdf-files/analysis/oro-bak.pdf',
+    import.meta.url,
+  ).href,
+  oro_bac_flora_2: new URL(
+    '../../assets/pdf-files/analysis/bac-faryngs_2.pdf',
     import.meta.url,
   ).href,
   uro_bac_flora: new URL(
@@ -33,6 +37,10 @@ const allPdfUrls = {
     '../../assets/pdf-files/analysis/hepatit.pdf',
     import.meta.url,
   ).href,
+  aslo: new URL('../../assets/pdf-files/analysis/aslo.pdf', import.meta.url)
+    .href,
+  igG: new URL('../../assets/pdf-files/analysis/ig-g.pdf', import.meta.url)
+    .href,
   hiv: new URL('../../assets/pdf-files/analysis/hiv.pdf', import.meta.url).href,
   herpes: new URL(
     '../../assets/pdf-files/analysis/herpes-cmv.pdf',
@@ -113,7 +121,7 @@ const usabdomen: IDocuments = {
 
 const oro_bac_flora: IDocuments = {
   id: 'oro_bac_flora',
-  pdfArray: [allPdfUrls.oro_bac_flora],
+  pdfArray: [allPdfUrls.oro_bac_flora_1, allPdfUrls.oro_bac_flora_2],
 };
 
 const uro_bac_flora: IDocuments = {
@@ -136,6 +144,16 @@ const herpes: IDocuments = {
   pdfArray: [allPdfUrls.herpes],
 };
 
+const aslo: IDocuments = {
+  id: 'aslo',
+  pdfArray: [allPdfUrls.aslo],
+};
+
+const igG: IDocuments = {
+  id: 'igG',
+  pdfArray: [allPdfUrls.igG],
+};
+
 export const diagnosisArray: IDocuments[] = [fgds, sct, petct, pathistology];
 export const ultrasoundArray: IDocuments[] = [
   usthyroid,
@@ -151,4 +169,6 @@ export const infectionsArray: IDocuments[] = [
   hepatitis,
   hiv,
   herpes,
+  aslo,
+  igG,
 ];
