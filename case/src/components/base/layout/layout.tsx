@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import { useRef, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Header from '../../header/header';
 import Footer from '../../footer/footer';
 import Path from '../../ui/path/path';
@@ -7,38 +7,38 @@ import useScrollTo from '../../../utils/scroll-to';
 import styles from './layout.module.css';
 
 function Layout() {
+  const [showTopBtn, setShowTopBtn] = useState(false);
   const { scrollToTop } = useScrollTo();
-  const [isVisible, setIsVisible] = useState(false);
-  const scrollRef = useRef<HTMLDivElement | null>(null);
-
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsVisible(!entry.isIntersecting);
-      },
-      { threshold: [1] },
-    );
+    let scrollTimeout: number | undefined;
 
-    const currentScroll = scrollRef.current;
+    const checkScroll = () => {
+      scrollTimeout = requestAnimationFrame(() => {
+        if (window.scrollY > 300) {
+          setShowTopBtn(true);
+        } else {
+          setShowTopBtn(false);
+        }
+        checkScroll();
+      });
+    };
 
-    if (currentScroll) {
-      observer.observe(currentScroll);
-    }
+    checkScroll();
 
     return () => {
-      if (currentScroll) {
-        observer.unobserve(currentScroll);
+      if (scrollTimeout) {
+        cancelAnimationFrame(scrollTimeout);
       }
     };
   }, []);
 
   return (
-    <div ref={scrollRef}>
+    <div>
       <Header />
       <main className={styles.container}>
         <Path />
         <Outlet />
-        {isVisible && (
+        {showTopBtn && (
           <button
             type="button"
             aria-label="scroll-button"
