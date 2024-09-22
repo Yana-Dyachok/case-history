@@ -25,13 +25,14 @@ function Path() {
 
   return pathElements.length > 1 ? (
     <ul className={styles.pathContainer}>
-      {pathElements.map((elem: PathElement, index) => {
-        const getSlash = index !== pathElements.length - 1 ? ' / ' : '';
+      {pathElements.map((elem: PathElement) => {
         return (
-          <p className={styles.pathElement} key={elem.link}>
-            <LinkTemplate to={elem.link}>{elem.value}</LinkTemplate>
-            {getSlash}
-          </p>
+          <li className={styles.pathElement} key={elem.link}>
+            <LinkTemplate to={elem.link}>
+              {elem.link === '/' ? '' : '/'}
+              {elem.value}
+            </LinkTemplate>
+          </li>
         );
       })}
     </ul>

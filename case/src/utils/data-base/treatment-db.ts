@@ -12,5 +12,18 @@ const otosurgery: IDocuments = {
   pdfArray: [alltreatmentPdfUrls.otosurgery],
 };
 
-const treatmentArray: IDocuments[] = [otosurgery];
+const chemotherapy: IDocuments = {
+  id: 'otosurgery',
+  pdfArray: [],
+};
+const radiationtherapy: IDocuments = {
+  id: 'otosurgery',
+  pdfArray: [],
+};
+
+const treatmentArray: IDocuments[] = [
+  otosurgery,
+  chemotherapy,
+  radiationtherapy,
+];
 export default treatmentArray;

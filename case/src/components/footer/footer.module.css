@@ -1,12 +1,17 @@
 .footer {
   height: 10vh;
   display: flex;
-  justify-content: start;
+  background-color: var(--c-green-600);
+  color: var(--c-white);
+}
+
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+  display: flex;
   align-items: center;
   gap: 2rem;
   padding: 1rem;
-  background-color: var(--c-green-600);
-  color: var(--c-white);
 }
 
 .icon {

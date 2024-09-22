@@ -33,6 +33,8 @@ const pathData: PathDataType = {
   analysis: 'Аналізи',
   treatment: 'Лікування',
   otosurgery: 'Оперативне втручання',
+  chemotherapy: 'Хіміотерапія',
+  radiationtherapy: 'Променева терапія',
 };
 
 export default pathData;
