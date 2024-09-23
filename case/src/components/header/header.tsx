@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { MouseEvent, useState } from 'react';
 import LinkTemplateIcon from '../ui/link/link-icon';
 import styles from './header.module.css';
 
@@ -7,6 +7,16 @@ function Header() {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  const handleNavClick = (event: MouseEvent<HTMLDivElement>) => {
+    if (event.target !== event.currentTarget) {
+      closeMenu();
+    }
   };
 
   return (
@@ -31,10 +41,12 @@ function Header() {
             <span className={styles.spanBurger} />
           </div>
         </button>
+        {/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */}
         <nav
           className={
             isMenuOpen ? `${styles.navMain} ${styles.open}` : styles.navMain
           }
+          onClick={handleNavClick}
         >
           <LinkTemplateIcon to="/anamnesis-vite" className={styles.iconVite}>
             Anamesis vite
