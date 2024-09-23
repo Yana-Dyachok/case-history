@@ -1,0 +1,98 @@
+{
+  "result": [
+    {
+      "scriptId": "1403",
+      "url": "file:///C:/Users/%D0%AF%D0%BD%D0%B0/Desktop/%D0%BC%D0%B0%D0%BB%D1%8C%D0%BA%D1%96/case-history/case/src/test_setup/setupTests.ts",
+      "functions": [
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 0, "endOffset": 1161, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 13, "endOffset": 1161, "count": 1 }],
+          "isBlockCoverage": true
+        }
+      ]
+    },
+    {
+      "scriptId": "1679",
+      "url": "file:///C:/Users/%D0%AF%D0%BD%D0%B0/Desktop/%D0%BC%D0%B0%D0%BB%D1%8C%D0%BA%D1%96/case-history/case/src/components/ui/link/link.test.tsx",
+      "functions": [
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 0, "endOffset": 5061, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 13, "endOffset": 5061, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "TestLinkTemplate",
+          "ranges": [{ "startOffset": 875, "endOffset": 1463, "count": 2 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 1521, "endOffset": 2579, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 1590, "endOffset": 2028, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 2088, "endOffset": 2575, "count": 1 }],
+          "isBlockCoverage": true
+        }
+      ]
+    },
+    {
+      "scriptId": "2002",
+      "url": "file:///C:/Users/%D0%AF%D0%BD%D0%B0/Desktop/%D0%BC%D0%B0%D0%BB%D1%8C%D0%BA%D1%96/case-history/case/src/components/ui/link/link.tsx",
+      "functions": [
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 0, "endOffset": 1991, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 13, "endOffset": 1991, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "LinkTemplate",
+          "ranges": [{ "startOffset": 580, "endOffset": 934, "count": 2 }],
+          "isBlockCoverage": true
+        }
+      ]
+    },
+    {
+      "scriptId": "2003",
+      "url": "file:///C:/Users/%D0%AF%D0%BD%D0%B0/Desktop/%D0%BC%D0%B0%D0%BB%D1%8C%D0%BA%D1%96/case-history/case/src/components/ui/link/link.module.css",
+      "functions": [
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 0, "endOffset": 1377, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 13, "endOffset": 1377, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "get",
+          "ranges": [{ "startOffset": 261, "endOffset": 331, "count": 2 }],
+          "isBlockCoverage": true
+        }
+      ]
+    }
+  ]
+}
