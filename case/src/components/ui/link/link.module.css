@@ -27,6 +27,7 @@
 }
 
 .textLink {
+  font-family: 'salina trial';
   color: var(--c-white);
   padding-bottom: 0.3rem;
   position: relative;
